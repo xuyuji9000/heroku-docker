@@ -23,6 +23,11 @@ then
 
     curl localhost:${PORT}
 
+elif [ $1 = "remove" ]
+then
+
+    docker rm -f $(docker ps -aq)
+
 else
     echo 'Does not recognize the command.'
 fi
