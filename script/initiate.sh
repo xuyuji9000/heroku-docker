@@ -28,6 +28,16 @@ then
 
     docker rm -f $(docker ps -aq)
 
+elif [ $1 = "push" ]
+then
+
+    heroku container:push web
+
+elif [ $1 = "release" ]
+then
+
+    heroku container:release web
+
 else
     echo 'Does not recognize the command.'
 fi
