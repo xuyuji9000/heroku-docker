@@ -2,4 +2,6 @@ FROM node:alpine
 
 COPY . .
 
-ENTRYPOINT ["node", "app.js"]
+RUN chmod +x ./entrypoint.sh
+
+CMD ["./entrypoint.sh"]
